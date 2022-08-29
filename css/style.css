@@ -1,0 +1,145 @@
+/* global styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cream: hsl(30, 38%, 92%);
+    --dark-cyan: hsl(158, 36%, 37%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    font-size: 14px;
+}
+
+body{
+    background-color: var(--cream);
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.attribution { 
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+/* global styles */
+
+/* card styles */
+.card{
+    width: 350px;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.product-mobile{
+    width: 100%;
+}
+
+.product-desktop{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.card-body{
+    padding: 25px;
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1{
+    font-family: 'Fraunces', serif;
+    font-size: 2.2rem;
+    color: var(--very-dark-blue);
+}
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-grayish-blue);
+    letter-spacing: 0.5rem;
+    font-size: 0.8rem;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-grayish-blue);
+}
+
+.price{
+    display: flex;
+    align-items: center;
+}
+
+.discount-price{
+    font-family: 'Fraunces', serif;
+    color: var(--dark-cyan);
+    margin-right: 1rem;
+    font-size: 2.5rem;
+}
+
+.real-price{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: line-through;
+    color: var(--dark-grayish-blue);
+}
+
+.card-button{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--dark-cyan);
+    padding: 1.2rem;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.card-button img{
+    margin-right: 0.5rem;
+}
+
+.card-button:hover{
+    background-color: hsl(158, 36%, 20%);
+}
+/* card styles */
+
+/* media-querys */
+@media (min-width: 600px){
+    .card{
+        width: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 300px);
+    }
+
+    .product-mobile{
+        display: none;
+    }
+
+    .product-desktop{
+        display: inline;
+    }
+
+    .card-body{
+        height: auto;
+    }
+}
+/* media-querys */
